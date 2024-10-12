@@ -9,7 +9,7 @@
 body {
   background-color: var(--ios-darker-gray);
   color: var(--ios-text);
-  font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-family: 'Courier Prime', 'Courier New', monospace;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -30,7 +30,7 @@ header h1 {
   color: var(--ios-text);
   margin: 0;
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 nav {
@@ -39,17 +39,22 @@ nav {
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   padding: 0 20px;
+  background-color: var(--ios-dark-gray);
+  position: sticky;
+  top: 60px;
+  z-index: 999;
 }
 
 nav a {
   color: var(--ios-blue);
   text-decoration: none;
   margin-right: 15px;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 0.9em;
   padding: 8px 16px;
   border-radius: 20px;
   transition: background-color 0.3s ease;
+  display: inline-block;
 }
 
 nav a:hover {
@@ -58,11 +63,11 @@ nav a:hover {
 
 main {
   padding: 20px;
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
 }
 
-section {
+.news-item {
   background-color: var(--ios-dark-gray);
   border-radius: 10px;
   padding: 20px;
@@ -70,14 +75,14 @@ section {
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-section h2 {
+.news-item h2 {
   color: var(--ios-text);
   margin-top: 0;
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-section p {
+.news-item p {
   font-size: 0.9em;
   color: var(--ios-gray);
 }
@@ -133,46 +138,65 @@ a:hover {
   text-decoration: none;
 }
 
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+.fas, .far, .fab {
+  margin-right: 5px;
 }
 
-.section-header h2 {
-  margin-bottom: 0;
+@media (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+  
+  .news-item {
+    padding: 15px;
+  }
 }
 
-.section-header a {
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--ios-blue);
+  color: var(--ios-text);
+  padding: 4px 8px;
+  border-radius: 12px;
   font-size: 0.8em;
-}
-
-.news-item {
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-
-.news-item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-.news-item h3 {
-  margin-top: 0;
-  margin-bottom: 5px;
-  font-size: 1em;
-  font-weight: 600;
-}
-
-.news-item p {
-  margin-top: 0;
+  margin-right: 5px;
   margin-bottom: 5px;
 }
 
-.news-item time {
-  color: var(--ios-gray);
-  font-size: 0.8em;
+.tag i {
+  margin-right: 3px;
 }
+
+.ads-card {
+      background-color: #f0f0f0;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .ads-card h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .ads-card p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+    .ads-card .join-button {
+      display: inline-block;
+      background-color: #0088cc;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .ads-card .join-button:hover {
+      background-color: #006699;
+    }
